@@ -6,22 +6,33 @@
 <title>klipy-upload</title>
 <style>
   :root { --bg: #ffffff; --text: #1a1a1a; --muted: #555; --line: #e3e3e3; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #121212; --text: #ececec; --muted: #aaa; --line: #333; } }
   body { background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, sans-serif; margin: 0; padding: 0 16px; }
-  main { max-width: 720px; margin: 40px auto; }
-  h1 { font-size: 28px; margin-bottom: 4px; }
-  h2 { font-size: 20px; margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--line); }
-  p, li { color: var(--text); }
+  header { max-width: 760px; margin: 0 auto; padding: 18px 0; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; border-bottom: 1px solid var(--line); }
+  header .name { font-weight: 700; font-size: 20px; margin-right: auto; }
+  header a { color: #065fd4; text-decoration: none; font-weight: 600; }
+  main { max-width: 760px; margin: 28px auto; }
+  .yt { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; margin: 8px 0 18px; }
+  .yt .logo { width: 40px; height: 28px; background: #ff0000; border-radius: 7px; position: relative; flex: none; }
+  .yt .logo::after { content: ""; position: absolute; left: 16px; top: 8px; border-left: 11px solid #fff; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+  h2 { font-size: 20px; margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--line); }
   .muted { color: var(--muted); }
+  footer { max-width: 760px; margin: 30px auto; padding: 16px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  footer a { color: #065fd4; }
 </style>
 </head>
 <body>
+<header>
+  <span class="name">klipy-upload</span>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="#terms">Terms of Service</a>
+</header>
 <main>
-  <h1>klipy-upload</h1>
+  <div class="yt"><span class="logo" aria-hidden="true"></span>
+    <span>Uploads my own videos to <strong>YouTube</strong> using <strong>YouTube API Services</strong></span></div>
   <p class="muted">A personal, non-commercial tool. Last updated: 18 November 2026.</p>
   <p>klipy-upload is a small desktop script used only by its owner to upload his own edited short gaming clips
      from his own computer to his own accounts on YouTube, Instagram and TikTok. It is not offered to, sold to,
-     or used by anyone else.</p>
+     or used by anyone else. Read the full <a href="privacy.html">Privacy Policy</a>.</p>
 
   <h2 id="terms">Terms of Service</h2>
   <ul>
@@ -29,24 +40,23 @@
     <li>Videos are uploaded only after the owner explicitly approves each upload.</li>
     <li>By authorizing the tool, the account owner allows it to upload videos and read basic account information
         on his request. Authorization can be revoked at any time.</li>
+    <li>By using this tool you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+        Google's data practices: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
     <li>The tool complies with the YouTube API Services Terms of Service, the Instagram Platform Terms and the TikTok
         Developer Terms. The tool is provided "as is", without warranties.</li>
-    <li>Use of YouTube is also subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</li>
   </ul>
 
-  <h2 id="privacy">Privacy Policy</h2>
+  <h2 id="privacy">Privacy (summary)</h2>
   <ul>
-    <li><strong>What data is accessed:</strong> basic information about the owner's own channel/account
-        (name, ID) and the ability to upload videos the owner selects.</li>
-    <li><strong>How it is used:</strong> only to upload the owner's videos and to show which account is connected.</li>
-    <li><strong>Storage:</strong> access tokens are stored only locally on the owner's computer. No data is stored on any server.</li>
-    <li><strong>Sharing:</strong> no data is shared with, sold to, or transferred to third parties.</li>
-    <li><strong>Other users:</strong> no data about any other users is collected.</li>
-    <li><strong>Revoking access:</strong> Google – <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
-        (see also the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>);
-        Instagram/Facebook – Settings → Apps and websites / Business integrations; TikTok – Settings → Security → Manage app permissions.</li>
-    <li><strong>Contact:</strong> through the e-mail address listed in the app's developer settings.</li>
+    <li>Only the owner's own account data (name, ID) is accessed; no data about other users.</li>
+    <li>Tokens are stored only locally on the owner's computer; nothing is shared with third parties.</li>
+    <li>Access can be revoked at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+        Full details: <a href="privacy.html">Privacy Policy</a>.</li>
   </ul>
 </main>
+<footer>
+  <a href="privacy.html">Privacy Policy</a> · <a href="#terms">Terms of Service</a> ·
+  <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+</footer>
 </body>
 </html>
